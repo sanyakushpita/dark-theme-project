@@ -1,0 +1,60 @@
+/* темний режим */
+body.dark-theme {
+  background-color: #1e2023;
+}
+
+/* Стилі для контейнера перемикача */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 24px;
+  border-radius: 16px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Сховати чекбокс */
+.theme-toggle input {
+  display: none;
+}
+
+/* Стилі для кружка-перемикача */
+.toggle-slider {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #14c57c;
+  position: relative;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+/* Темна тема - фон перемикача */
+body.dark-theme .theme-toggle {
+  background: #2a2d32;
+}
+
+/* Темна тема - переміщення кружка вправо */
+body.dark-theme .toggle-slider {
+  transform: translateX(32px);
+  background: #14c57c;
+}
+
+/* Темна тема - чорний півмісяць */
+body.dark-theme .toggle-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2a2d32;
+  transform: translateX(-6px);
+  transition: transform 0.4s ease;
+}
